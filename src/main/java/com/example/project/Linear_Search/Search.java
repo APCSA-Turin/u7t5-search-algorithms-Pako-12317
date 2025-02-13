@@ -7,6 +7,11 @@ public class Search {
     // should be accepted as parameters); return -1 if target is not found
     // BE SURE TO USE EARLY RETURN (more efficient)
     public static int linearSearchFirst(int[] elements, int target) {
+        for (int i = 0; i < elements.length; i++) {
+            if (elements[i] == target) {
+                return i;
+            }
+        }
         return -1;
     }
 
@@ -15,6 +20,11 @@ public class Search {
     // should be accepted as parameters); return -1 if target is not found
     // FIGURE OUT A WAY TO DO THIS THAT STILL USES AN EARLY RETURN!!!!!
     public static int linearSearchLast(int[] elements, int target) {
+        for (int i = elements.length - 1; i >= 0; i--) {
+            if (elements[i] == target) {
+                return i;
+            }
+        }
         return -1;
     }
 
@@ -23,6 +33,11 @@ public class Search {
     // it returns true if target is found or false if target is not found
     // AGAIN, BE SURE TO USE EARLY RETURN!
     public static boolean linearSearchFound(int[] elements, int target) {
+        for (int element : elements) {
+            if (element == target) {
+                return true;
+            }
+        }
         return false;
     }
 
